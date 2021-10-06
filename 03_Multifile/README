@@ -1,0 +1,8 @@
+Создан Makefile для многофайловой сборки. Изменен fun.c:
+
+Было: fprintf(stderr, "%s v%.2f: Print all arguments\012\t"\
+                "Usage: %s arg1 [arg2 […]]\012", prog, VERSION, prog);
+Стало: 
+    fprintf(stderr, "v%.2f: Print all arguments\012\t"\
+                "Usage: arg1 [arg2 […]]\012", VERSION);
+Это нужно для того, чтобы совпадали выводы потока ошибок для prog, prog-a, prog-so.
